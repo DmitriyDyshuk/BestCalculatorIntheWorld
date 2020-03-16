@@ -51,11 +51,6 @@ class MainActivity : AppCompatActivity() {
                 val result = ex.evaluate()
                 val longRes = result.toLong()
 
-//                if (result == longRes.toDouble())
-//                    result_text.text = longRes.toString()
-//                else
-//                    result_text.text = result.toString()
-
                 result_text.text = if (result == longRes.toDouble()) longRes.toString() else result.toString()
 
             } catch (e:Exception) {
