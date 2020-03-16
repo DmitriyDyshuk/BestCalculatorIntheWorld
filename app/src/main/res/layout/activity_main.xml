@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMain"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/math_operation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:gravity="end"
+        android:ellipsize="start"
+        android:textSize="30sp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:gravity="end"
+        android:ellipsize="end"
+        android:textSize="40sp"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.example.calculator.view.SquareTextView
+                android:id="@+id/clear_btn"
+                style="@style/DarkGrayButton"
+                android:text="AC"
+                />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/DarkGrayButton"
+                android:text="("
+                android:id="@+id/Leftskobka_btn"/>
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/DarkGrayButton"
+                android:text=")"
+                android:id="@+id/Rightskobka_btn" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/OrangeButton"
+                android:text="/"
+                android:id="@+id/slash_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="7"
+                android:id="@+id/btn_7" />
+
+            <com.example.calculator.view.SquareTextView
+                android:id="@+id/btn_8"
+                style="@style/GrayButton"
+                android:text="8" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="9"
+                android:id="@+id/btn_9" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/OrangeButton"
+                android:text="X"
+                android:id="@+id/btn_star" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="4"
+                android:id="@+id/btn_4" />
+
+            <com.example.calculator.view.SquareTextView
+                android:id="@+id/btn_5"
+                style="@style/GrayButton"
+                android:text="5" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="6"
+                android:id="@+id/btn_6" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/OrangeButton"
+                android:text="+"
+                android:id="@+id/btn_plus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="1"
+                android:id="@+id/btn_1" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="2"
+                android:id="@+id/btn_2" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="3"
+                android:id="@+id/btn_3" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/OrangeButton"
+                android:text="-"
+                android:id="@+id/btn_minus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="."
+                android:id="@+id/btn_dat" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="0"
+                android:id="@+id/btn_0" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/GrayButton"
+                android:text="Back"
+                android:id="@+id/btn_back" />
+
+            <com.example.calculator.view.SquareTextView
+                style="@style/OrangeButton"
+                android:text="="
+                android:id="@+id/btn_equal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
