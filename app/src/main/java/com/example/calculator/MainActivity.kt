@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         btn_9.setOnClickListener { setTextField("9") }
         btn_minus.setOnClickListener { setTextField("-") }
         btn_plus.setOnClickListener { setTextField("+") }
-        btn_star.setOnClickListener { setTextField("*") }
+        btn_star.setOnClickListener { setTextField("x") }
         slash_btn.setOnClickListener { setTextField("/") }
         Leftskobka_btn.setOnClickListener { setTextField("(") }
         Rightskobka_btn.setOnClickListener { setTextField(")") }
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         btn_equal.setOnClickListener {
             try {
-                val ex = ExpressionBuilder(math_operation.text.toString()).build()
+                val ex = ExpressionBuilder(math_operation.text.toString().replace('x','*')).build()
                 val result = ex.evaluate()
                 val longRes = result.toLong()
 
