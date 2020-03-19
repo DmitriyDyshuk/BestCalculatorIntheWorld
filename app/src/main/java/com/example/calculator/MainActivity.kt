@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         slash_btn.setOnClickListener { setTextField("/") }
         Leftskobka_btn.setOnClickListener { setTextField("(") }
         Rightskobka_btn.setOnClickListener { setTextField(")") }
+        btn_dat.setOnClickListener { setTextField(".") }
 
         clear_btn.setOnClickListener {
 
@@ -51,8 +52,10 @@ class MainActivity : AppCompatActivity() {
                 val result = ex.evaluate()
                 val longRes = result.toLong()
 
-                result_text.text = if (result == longRes.toDouble()) longRes.toString() else result.toString()
-
+               if (result == longRes.toDouble())
+                   result_text.text = result.toString()
+                else
+                   result_text.text = result.toString()
             } catch (e:Exception) {
                 Log.d("Ошибка", " сообщение: ${e.message}" )
             }
