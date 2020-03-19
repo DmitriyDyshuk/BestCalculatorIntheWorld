@@ -1,6 +1,5 @@
 package com.example.calculator
 
-import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -34,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         btn_dat.setOnClickListener { setTextField(".") }
 
         clear_btn.setOnClickListener {
-
             math_operation.text = ""
             result_text.text = ""
         }
@@ -60,7 +58,6 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Ошибка", " сообщение: ${e.message}" )
             }
         }
-
     }
 
     private fun setTextField(str: String) {
@@ -71,4 +68,5 @@ class MainActivity : AppCompatActivity() {
 
         math_operation.text = "${math_operation.text}$str"
     }
+
 }
